@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ordermanagement.list;
+
+import java.util.Date;
+import java.util.List;
+import ordermanagement.model.Orders;
+
+/**
+ *
+ * @author imnvi
+ */
+public class OrdersList extends ObjectList<Orders> {
+    
+    public OrdersList() {
+    }
+
+    public OrdersList(String filePath) {
+        super(filePath);
+    }
+
+    @Override
+    public List<Orders> filter(String id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public List<Orders> filter(Date date) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    protected Orders parseString(String stringObject) {
+        Orders obj = new Orders();
+        obj.parseString(stringObject);
+        return obj;
+    }
+}
